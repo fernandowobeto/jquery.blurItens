@@ -1,0 +1,73 @@
+.blurItens:before,
+.blurItens:after {
+    content:"";
+    display:table;
+}
+.blurItens:after {
+    clear:both;
+}
+.blurItens article{
+	display: block;
+	width: 140px;
+	background: #fff;
+	cursor: pointer;
+	float: left;
+	border: 10px solid #fff;
+	text-align: left;
+	text-transform: none;
+	margin: 15px;
+	z-index: 1;
+	-webkit-backface-visibility: hidden;
+	box-shadow:
+		0px 0px 0px 10px rgba(255,255,255,1),
+		1px 1px 3px 10px rgba(0,0,0,0.2);
+	-webkit-transition:
+		opacity 0.4s linear,
+		-webkit-transform 0.4s ease-in-out,
+		box-shadow 0.4s ease-in-out;
+	-moz-transition:
+		opacity 0.4s linear,
+		-moz-transform 0.4s ease-in-out,
+		box-shadow 0.4s ease-in-out;
+	-o-transition:
+		opacity 0.4s linear,
+		-o-transform 0.4s ease-in-out,
+		box-shadow 0.4s ease-in-out;
+	-ms-transition:
+		opacity 0.4s linear,
+		-ms-transform 0.4s ease-in-out,
+		box-shadow 0.4s ease-in-out;
+	transition:
+		opacity 0.4s linear,
+		transform 0.4s ease-in-out,
+		box-shadow 0.4s ease-in-out;
+
+}
+/* Hover Style for all the items: blur, scale down*/
+.blurItens article.blur{
+	box-shadow: 0px 0px 20px 10px rgba(255,255,255,1);
+	-webkit-transform: scale(0.9);
+	-moz-transform: scale(0.9);
+	-o-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	transform: scale(0.9);
+	opacity: 0.8;
+}
+.blurItens article.blur *{
+	text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+	color: rgba(0, 0, 0, 0);
+	opacity: 0.8;
+}
+/* Hover Style for single item: scale up */
+.blurItens article.active{
+	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-o-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+	box-shadow:
+		0px 0px 0px 10px rgba(255,255,255,1),
+		1px 11px 15px 10px rgba(0,0,0,0.4);
+	z-index: 100;
+	opacity: 1;
+}
